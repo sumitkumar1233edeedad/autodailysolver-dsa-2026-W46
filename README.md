@@ -5,12 +5,12 @@
 
 ## 📊 Weekly Progress Dashboard
 
-- **Weekly Target:** `6 / 112` problems solved (5.4%)
+- **Weekly Target:** `7 / 112` problems solved (6.2%)
 - **Structure:** `7 Days` × `8 Levels/day` × `2 Questions/level` = `16 Questions/day`
 - **Verified by Sandbox:** 100% of committed code passed isolated unit testing before pushing.
 
 ```text
-Progress: [=                   ] 5.4%
+Progress: [=                   ] 6.2%
 ```
 
 ## 🗓️ 7-Day Curriculum & Daily Themes
@@ -29,7 +29,7 @@ Progress: [=                   ] 5.4%
 
 | Day & Topic | L01 | L02 | L03 | L04 | L05 | L06 | L07 | L08 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Day 01**<br><sub>Arrays & Hashing</sub> | [1](day-01/level-01/question-01/question.md) [2](day-01/level-01/question-02/question.md) | [1](day-01/level-02/question-01/question.md) [2](day-01/level-02/question-02/question.md) | [1](day-01/level-03/question-01/question.md) [2](day-01/level-03/question-02/question.md) | · · | · · | · · | · · | · · |
+| **Day 01**<br><sub>Arrays & Hashing</sub> | [1](day-01/level-01/question-01/question.md) [2](day-01/level-01/question-02/question.md) | [1](day-01/level-02/question-01/question.md) [2](day-01/level-02/question-02/question.md) | [1](day-01/level-03/question-01/question.md) [2](day-01/level-03/question-02/question.md) | [1](day-01/level-04/question-01/question.md) · | · · | · · | · · | · · |
 | **Day 02**<br><sub>Arrays & Hashing</sub> | · · | · · | · · | · · | · · | · · | · · | · · |
 | **Day 03**<br><sub>Arrays & Hashing</sub> | · · | · · | · · | · · | · · | · · | · · | · · |
 | **Day 04**<br><sub>Arrays & Hashing</sub> | · · | · · | · · | · · | · · | · · | · · | · · |

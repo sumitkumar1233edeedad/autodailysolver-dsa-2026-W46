@@ -1,14 +1,14 @@
 {
   "repository_name": "autodailysolver-dsa-2026-W46",
   "total_target": 112,
-  "total_solved": 6,
-  "completion_percentage": 5.4,
+  "total_solved": 7,
+  "completion_percentage": 6.2,
   "is_completed": false,
   "current_pointer": {
     "day": 1,
     "level": 4,
-    "question": 1,
-    "folder_path": "day-01/level-04/question-01/"
+    "question": 2,
+    "folder_path": "day-01/level-04/question-02/"
   },
   "solved_solutions": [
     {
@@ -69,8 +69,18 @@
       "title": "Move Zeroes",
       "difficulty": "Easy",
       "topic": "Arrays & Hashing",
+      "commit_sha": "1bb40594187b33553da187fc1a5f9bd99ec11cb1"
+    },
+    {
+      "day": 1,
+      "level": 4,
+      "question": 1,
+      "folder": "day-01/level-04/question-01/",
+      "title": "Minimum Size Subarray Sum",
+      "difficulty": "Medium",
+      "topic": "Arrays & Hashing",
       "commit_sha": ""
     }
   ],
-  "last_updated": "2026-10-27T06:45:12.424596+00:00"
+  "last_updated": "2026-10-27T06:46:53.746800+00:00"
 }
