@@ -1,30 +1,24 @@
+from collections import defaultdict
 from typing import List
 
-def productExceptSelf(nums: List[int]) -> List[int]:
+def subarraySum(nums: List[int], k: int) -> int:
     """
-    Returns an array where each element at index i is the product of all elements
-    in nums except nums[i].
+    Returns the total number of continuous subarrays whose sum equals to k.
 
-    This implementation runs in O(n) time and uses O(1) extra space (excluding
-    the output array). It does not use division.
+    Uses a prefix sum hashmap to store the frequency of each prefix sum encountered.
+    For each current prefix sum, we check how many previous prefix sums equal (current - k),
+    which corresponds to subarrays ending at the current index with sum k.
 
-    Args:
-        nums: List of integers with length >= 2.
-
-    Returns:
-        List of integers where answer[i] = product of all nums[j] for j != i.
+    Time Complexity: O(n)
+    Space Complexity: O(n)
     """
-    n = len(nums)
-    answer = [1] * n
-
-    # Compute prefix products
-    for i in range(1, n):
-        answer[i] = answer[i - 1] * nums[i - 1]
-
-    # Multiply by suffix products
-    suffix = 1
-    for i in range(n - 1, -1, -1):
-        answer[i] *= suffix
-        suffix *= nums[i]
-
-    return answer
+    prefix_counts = defaultdict(int)
+    prefix_counts[0] = 1  # empty prefix sum
+    current_sum = 0
+    count = 0
+    for num in nums:
+        current_sum += num
+        # If there is a prefix sum equal to current_sum - k, then the subarray between that prefix and current index sums to k.
+        count += prefix_counts.get(current_sum - k, 0)
+        prefix_counts[current_sum] += 1
+    return count
