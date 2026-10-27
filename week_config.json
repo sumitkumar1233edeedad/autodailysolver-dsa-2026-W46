@@ -1,0 +1,63 @@
+{
+  "schema_version": "2.0.0",
+  "repository_name": "autodailysolver-dsa-2026-W46",
+  "year": 2026,
+  "iso_week": 44,
+  "user": "admin",
+  "daily_target": 16,
+  "fixed_levels_per_day": 8,
+  "questions_per_level": 2,
+  "total_days": 7,
+  "total_weekly_questions": 112,
+  "level_hierarchy": {
+    "level-01": {
+      "difficulty": "Easy",
+      "category": "Arrays & Strings",
+      "focus": "Fundamentals, String Parsing, Two Pointers",
+      "questions_count": 2
+    },
+    "level-02": {
+      "difficulty": "Easy",
+      "category": "Hash Tables & Math",
+      "focus": "Hash Sets, Counting, Basic Math & Bitwise",
+      "questions_count": 2
+    },
+    "level-03": {
+      "difficulty": "Medium",
+      "category": "Two Pointers & Sliding Window",
+      "focus": "Subarrays, Window Shrinking, Intervals",
+      "questions_count": 2
+    },
+    "level-04": {
+      "difficulty": "Medium",
+      "category": "Binary Search & Stacks",
+      "focus": "Sorted Arrays, Monotonic Stacks, Queues",
+      "questions_count": 2
+    },
+    "level-05": {
+      "difficulty": "Medium",
+      "category": "Linked Lists & Recursion",
+      "focus": "Pointers, Cycle Detection, Divide & Conquer",
+      "questions_count": 2
+    },
+    "level-06": {
+      "difficulty": "Medium",
+      "category": "Binary Trees & BST",
+      "focus": "DFS, BFS, Tree Traversals, Path Sums",
+      "questions_count": 2
+    },
+    "level-07": {
+      "difficulty": "Hard",
+      "category": "Dynamic Programming & Greedy",
+      "focus": "1D/2D DP, Memoization, Subsequences",
+      "questions_count": 2
+    },
+    "level-08": {
+      "difficulty": "Hard",
+      "category": "Graphs & Backtracking",
+      "focus": "Graph Traversal, Permutations, Topological Sort",
+      "questions_count": 2
+    }
+  },
+  "created_at": "2026-10-27T05:14:01.589467+00:00"
+}
