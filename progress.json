@@ -1,14 +1,14 @@
 {
   "repository_name": "autodailysolver-dsa-2026-W46",
   "total_target": 112,
-  "total_solved": 7,
-  "completion_percentage": 6.2,
+  "total_solved": 8,
+  "completion_percentage": 7.1,
   "is_completed": false,
   "current_pointer": {
     "day": 1,
-    "level": 4,
-    "question": 2,
-    "folder_path": "day-01/level-04/question-02/"
+    "level": 5,
+    "question": 1,
+    "folder_path": "day-01/level-05/question-01/"
   },
   "solved_solutions": [
     {
@@ -79,8 +79,18 @@
       "title": "Minimum Size Subarray Sum",
       "difficulty": "Medium",
       "topic": "Arrays & Hashing",
+      "commit_sha": "66b5ec90394cd05148215b4216cdb9196f3675d4"
+    },
+    {
+      "day": 1,
+      "level": 4,
+      "question": 2,
+      "folder": "day-01/level-04/question-02/",
+      "title": "Longest Subarray with At Most K Distinct Integers",
+      "difficulty": "Medium",
+      "topic": "Arrays & Hashing",
       "commit_sha": ""
     }
   ],
-  "last_updated": "2026-10-27T06:46:53.746800+00:00"
+  "last_updated": "2026-10-27T06:52:56.536844+00:00"
 }
