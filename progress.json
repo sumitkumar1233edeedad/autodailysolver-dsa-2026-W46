@@ -5,10 +5,10 @@
   "completion_percentage": 14.3,
   "is_completed": false,
   "current_pointer": {
-    "day": 2,
-    "level": 1,
-    "question": 1,
-    "folder_path": "day-02/level-01/question-01/"
+    "day": 1,
+    "level": 8,
+    "question": 2,
+    "folder_path": "day-01/level-08/question-02/"
   },
   "solved_solutions": [
     {
@@ -162,15 +162,15 @@
       "commit_sha": "3658337064a9df812d02b67270f9c5ed2cd9445d"
     },
     {
-      "day": 1,
-      "level": 8,
-      "question": 2,
-      "folder": "day-01/level-08/question-02/",
-      "title": "Maximum Weight of Two Non-Overlapping Intervals",
-      "difficulty": "Hard",
+      "day": 2,
+      "level": 1,
+      "question": 1,
+      "folder": "day-02/level-01/question-01/",
+      "title": "Find Target Index in Array",
+      "difficulty": "Easy",
       "topic": "Arrays & Hashing",
       "commit_sha": ""
     }
   ],
-  "last_updated": "2026-10-28T06:31:35.964136+00:00"
+  "last_updated": "2026-10-28T06:33:02.260423+00:00"
 }
