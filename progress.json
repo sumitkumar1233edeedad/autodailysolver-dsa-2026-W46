@@ -1,14 +1,14 @@
 {
   "repository_name": "autodailysolver-dsa-2026-W46",
   "total_target": 112,
-  "total_solved": 17,
-  "completion_percentage": 15.2,
+  "total_solved": 18,
+  "completion_percentage": 16.1,
   "is_completed": false,
   "current_pointer": {
     "day": 2,
-    "level": 1,
-    "question": 2,
-    "folder_path": "day-02/level-01/question-02/"
+    "level": 2,
+    "question": 1,
+    "folder_path": "day-02/level-02/question-01/"
   },
   "solved_solutions": [
     {
@@ -169,7 +169,7 @@
       "title": "In-Place Merge Intervals for Maximum Weight",
       "difficulty": "Hard",
       "topic": "Arrays & Hashing",
-      "commit_sha": ""
+      "commit_sha": "d00763ea1edee9aeb2fc5f30ca113c029d26a62a"
     },
     {
       "day": 2,
@@ -180,7 +180,17 @@
       "difficulty": "Easy",
       "topic": "Arrays & Hashing",
       "commit_sha": "ee7750fb6f7fd8266c79974b63cba9ffd82a77f5"
+    },
+    {
+      "day": 2,
+      "level": 1,
+      "question": 2,
+      "folder": "day-02/level-01/question-02/",
+      "title": "Partition Array by Sign",
+      "difficulty": "Easy",
+      "topic": "Arrays & Hashing",
+      "commit_sha": ""
     }
   ],
-  "last_updated": "2026-10-28T06:36:44.093290+00:00"
+  "last_updated": "2026-10-28T07:03:26.713694+00:00"
 }
