@@ -1,14 +1,14 @@
 {
   "repository_name": "autodailysolver-dsa-2026-W46",
   "total_target": 112,
-  "total_solved": 16,
-  "completion_percentage": 14.3,
+  "total_solved": 17,
+  "completion_percentage": 15.2,
   "is_completed": false,
   "current_pointer": {
-    "day": 1,
-    "level": 8,
+    "day": 2,
+    "level": 1,
     "question": 2,
-    "folder_path": "day-01/level-08/question-02/"
+    "folder_path": "day-02/level-01/question-02/"
   },
   "solved_solutions": [
     {
@@ -162,6 +162,16 @@
       "commit_sha": "3658337064a9df812d02b67270f9c5ed2cd9445d"
     },
     {
+      "day": 1,
+      "level": 8,
+      "question": 2,
+      "folder": "day-01/level-08/question-02/",
+      "title": "In-Place Merge Intervals for Maximum Weight",
+      "difficulty": "Hard",
+      "topic": "Arrays & Hashing",
+      "commit_sha": ""
+    },
+    {
       "day": 2,
       "level": 1,
       "question": 1,
@@ -169,8 +179,8 @@
       "title": "Find Target Index in Array",
       "difficulty": "Easy",
       "topic": "Arrays & Hashing",
-      "commit_sha": ""
+      "commit_sha": "ee7750fb6f7fd8266c79974b63cba9ffd82a77f5"
     }
   ],
-  "last_updated": "2026-10-28T06:33:02.260423+00:00"
+  "last_updated": "2026-10-28T06:36:44.093290+00:00"
 }

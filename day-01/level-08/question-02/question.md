@@ -1,4 +1,4 @@
-# Maximum Weight of Two Non-Overlapping Intervals
+# In-Place Merge Intervals for Maximum Weight
 
 - **Day:** `Day 01`
 - **Level:** `Level 08`
@@ -11,40 +11,43 @@
 
 ## 📝 Problem Statement
 
-You are given a flat array `intervals` of length `3n` where each interval is represented by three consecutive integers: `start`, `end`, and `weight`. The intervals are not sorted. Your task is to find the maximum sum of weights of two non-overlapping intervals. Two intervals are non-overlapping if the end of one is strictly less than the start of the other (i.e., they do not share any point).
+You are given an array `intervals` where `intervals[i] = [start_i, end_i, weight_i]`. The array is **sorted in non-decreasing order by `start_i`**.
 
-You must solve this problem by first sorting the intervals in-place by their start time (using O(1) extra space), then using a dual-pointer approach to compute the answer in O(n) time after sorting. Return the maximum sum of weights. If no two non-overlapping intervals exist, return 0.
+Merge all overlapping intervals **in-place** such that the first `k` elements of `intervals` contain the merged intervals. A merged interval is defined as:
+- `start` = minimum start of the overlapping group
+- `end` = maximum end of the overlapping group
+- `weight` = sum of weights of all intervals in the overlapping group
+
+Two intervals overlap if they share at least one common point (i.e., `start1 <= end2 && start2 <= end1`). After merging, the merged intervals must be non-overlapping and remain sorted by start time.
+
+Return the **maximum weight** among all merged intervals.
 
 **Constraints:**
-- `2 <= n <= 10^5`
-- `0 <= start < end <= 10^9`
-- `1 <= weight <= 10^9`
-- The array length is exactly `3n`.
-- You must modify the array in-place for sorting (you may use built-in sort which is in-place).
-- Extra space complexity must be O(1) excluding the input array.
+- `1 <= intervals.length <= 10^5`
+- `0 <= start_i <= end_i <= 10^9`
+- `1 <= weight_i <= 10^4`
+- The input array is sorted by `start_i`.
+- **You must solve this in-place with O(1) extra space** (excluding the output variable).
 
 **Example 1:**
 ```
-Input: intervals = [1, 3, 5, 2, 4, 4, 5, 6, 3]
-Interpretation: [[1,3,5], [2,4,4], [5,6,3]]
+Input: intervals = [[1,3,5],[2,6,3],[8,10,2],[15,18,4]]
 Output: 8
-Explanation: Choose intervals [1,3,5] and [5,6,3] (non-overlapping because 3 < 5). Sum = 5 + 3 = 8.
+Explanation: Merge [1,3,5] and [2,6,3] into [1,6,8]. The merged intervals are [[1,6,8],[8,10,2],[15,18,4]]. Maximum weight is 8.
 ```
 
 **Example 2:**
 ```
-Input: intervals = [1, 5, 10, 2, 3, 5, 4, 6, 8]
-Interpretation: [[1,5,10], [2,3,5], [4,6,8]]
-Output: 13
-Explanation: Choose intervals [2,3,5] and [4,6,8] (non-overlapping because 3 < 4). Sum = 5 + 8 = 13.
+Input: intervals = [[1,4,2],[4,5,3]]
+Output: 5
+Explanation: Intervals overlap at 4. Merged into [1,5,5]. Maximum weight is 5.
 ```
 
 **Example 3:**
 ```
-Input: intervals = [1, 2, 5, 2, 3, 6]
-Interpretation: [[1,2,5], [2,3,6]]
-Output: 0
-Explanation: The two intervals share the point 2 (end=2, start=2), so they overlap. No valid pair exists.
+Input: intervals = [[1,2,1],[3,4,2],[5,6,3]]
+Output: 3
+Explanation: No overlaps. Maximum weight is 3.
 ```
 
 ---
@@ -52,12 +55,9 @@ Explanation: The two intervals share the point 2 (end=2, start=2), so they overl
 ## 💻 Starter Function
 
 ```python
-def max_weight_two_non_overlapping(intervals: list[int]) -> int:
-    """
-    Returns the maximum sum of weights of two non-overlapping intervals.
-    The input is a flat list [start1, end1, weight1, start2, end2, weight2, ...].
-    Must sort in-place and use dual-pointer technique.
-    """
+from typing import List
+
+def max_weight_merged_intervals(intervals: List[List[int]]) -> int:
     pass
 ```
 
@@ -65,7 +65,7 @@ def max_weight_two_non_overlapping(intervals: list[int]) -> int:
 
 ## 🧠 AI Auto-Think Pedagogical Reasoning
 
-> The previous problem (Level 08 Q01) 'Maximum Weight Overlap Intervals' focused on finding a single point of maximum weight overlap using a sweep-line approach. This complementary twist shifts the focus to non-overlapping intervals: finding the maximum weight sum of two disjoint intervals. This requires sorting intervals by start time (in-place on a flat array) and then applying a dual-pointer (or two-pointer with binary search) technique to efficiently find the best pair. It reinforces interval sorting, in-place array manipulation, and dual-pointer traversal for extremes (maximum weight prefix/suffix), while avoiding duplication of the sweep-line mechanic. The flat-array representation adds an extra layer of index manipulation practice, aligning with the day's theme of Linear Traversals & Direct Indexing.
+> The previous problem 'Maximum Weight Overlap Intervals' (Level 08 Q01) practiced the sweep-line pattern to find the maximum weight of intervals overlapping at a single point. The complementary twist for Part 2 is 'in-place constraints' on interval merging. This problem requires merging overlapping intervals in-place (O(1) space) while accumulating weights, and then finding the maximum weight among the merged intervals. It reinforces the two-pointer pattern for in-place array modification and interval merging, which is a fundamental skill for array problems. It avoids duplication by focusing on the merging process rather than just querying overlap weights, and it introduces the constraint of in-place transformation which is a common follow-up in interviews.
 ---
 
 ## 📁 Files

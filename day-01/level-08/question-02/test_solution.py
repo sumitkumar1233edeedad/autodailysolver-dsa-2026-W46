@@ -1,43 +1,70 @@
 import unittest
+from typing import List
 
-class TestMaxWeightTwoNonOverlapping(unittest.TestCase):
+class TestMaxWeightMergedIntervals(unittest.TestCase):
     def test_example1(self):
-        intervals = [1, 3, 5, 2, 4, 4, 5, 6, 3]
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 8)
+        intervals = [[1,3,5],[2,6,3],[8,10,2],[15,18,4]]
+        expected_max = 8
+        expected_merged = [[1,6,8],[8,10,2],[15,18,4]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
 
     def test_example2(self):
-        intervals = [1, 5, 10, 2, 3, 5, 4, 6, 8]
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 13)
+        intervals = [[1,4,2],[4,5,3]]
+        expected_max = 5
+        expected_merged = [[1,5,5]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
 
     def test_example3(self):
-        intervals = [1, 2, 5, 2, 3, 6]
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 0)
+        intervals = [[1,2,1],[3,4,2],[5,6,3]]
+        expected_max = 3
+        expected_merged = [[1,2,1],[3,4,2],[5,6,3]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
+
+    def test_single_interval(self):
+        intervals = [[5,10,7]]
+        expected_max = 7
+        expected_merged = [[5,10,7]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
 
     def test_all_overlap(self):
-        # All intervals overlap, no valid pair
-        intervals = [1, 10, 5, 2, 9, 6, 3, 8, 7]
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 0)
+        intervals = [[1,5,2],[2,6,3],[3,7,4]]
+        expected_max = 9
+        expected_merged = [[1,7,9]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
 
-    def test_disjoint_intervals(self):
-        # Intervals are completely separate
-        intervals = [1, 2, 10, 3, 4, 20, 5, 6, 30]
-        # Best pair: 20+30=50 (intervals 2 and 3) or 10+30=40, etc.
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 50)
+    def test_no_overlap(self):
+        intervals = [[1,2,10],[3,4,20],[5,6,5]]
+        expected_max = 20
+        expected_merged = [[1,2,10],[3,4,20],[5,6,5]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
+
+    def test_overlap_at_boundary(self):
+        intervals = [[1,3,5],[3,5,2],[5,7,3]]
+        expected_max = 10
+        expected_merged = [[1,7,10]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
 
     def test_large_weights(self):
-        intervals = [1, 2, 1000000000, 3, 4, 1000000000]
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 2000000000)
-
-    def test_unsorted_input(self):
-        # Input not sorted by start
-        intervals = [5, 6, 3, 1, 3, 5, 2, 4, 4]
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 8)
-
-    def test_multiple_valid_pairs(self):
-        intervals = [1, 2, 10, 2, 3, 5, 3, 4, 8, 4, 5, 7]
-        # Valid pairs: (10,8)=18, (10,7)=17, (5,7)=12, (5,8)=13, etc.
-        # Best is 10+8=18 (intervals [1,2,10] and [3,4,8])
-        self.assertEqual(max_weight_two_non_overlapping(intervals), 18)
+        intervals = [[1,2,10000],[2,3,10000],[3,4,10000]]
+        expected_max = 30000
+        expected_merged = [[1,4,30000]]
+        result = max_weight_merged_intervals(intervals)
+        self.assertEqual(result, expected_max)
+        self.assertEqual(intervals[:len(expected_merged)], expected_merged)
 
 if __name__ == '__main__':
     unittest.main()
